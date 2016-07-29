@@ -17,6 +17,10 @@ public class MItemRenderRegister {
 		reg(MItems.CopperPickaxe);
 		reg(MItems.CopperShovel);
 		reg(MItems.CopperSword);
+		reg(MItems.CopperHelmet);
+		reg(MItems.CopperChestplate);
+		reg(MItems.CopperLeggings);
+		reg(MItems.CopperBoots);
 	}
 
 	public static void reg(Item item) {
