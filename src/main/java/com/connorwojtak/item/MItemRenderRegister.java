@@ -22,7 +22,6 @@ public class MItemRenderRegister {
 	public static void reg(Item item) {
 	    Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
 	    .register(item, 0, new ModelResourceLocation(MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
-	    System.out.println(MODID + ":" + item.getUnlocalizedName().substring(5));
 	}
 }
 

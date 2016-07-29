@@ -13,6 +13,7 @@ public final class MBlockRenderRegister {
 	
 	public static void registerBlockRenderer() {
 		reg(MBlocks.CopperBlock);
+		reg(MBlocks.CopperOre);
 	}
 
 	public static void reg(Block block) {

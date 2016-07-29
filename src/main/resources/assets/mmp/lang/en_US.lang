@@ -6,3 +6,7 @@ item.copper_hoe.name=Copper Hoe
 item.copper_sword.name=Copper Sword
 
 tile.copper_block.name=Copper Block
+tile.copper_ore.name=Copper Ore
+
+itemGroup.mmpItems=MMP's Items
+itemGroup.mmpBlocks=MMP's Blocks

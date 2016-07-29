@@ -1,5 +1,8 @@
 package com.connorwojtak.item;
 
+import com.connorwojtak.creativetab.MTabBlock;
+import com.connorwojtak.creativetab.MTabItem;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
@@ -7,30 +10,39 @@ import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MItems{
-	public static ToolMaterial Copper = EnumHelper.addToolMaterial("Copper", 5, 181, 1.5F, 3.0F, 15);
+	public static CreativeTabs tabItem = new MTabItem("mmpItems");
 	
-	public static Item CopperIngot = new StandardItem().setMaxStackSize(16)
-	.setCreativeTab(CreativeTabs.MISC).setRegistryName("copper_ingot")
+	//Copper Material
+	public static final ToolMaterial Copper = EnumHelper.addToolMaterial("Copper", 5, 181, 1.5F, 3.0F, 15);
+	
+	//Copper Ingot
+	public static final Item CopperIngot = new StandardItem().setMaxStackSize(16)
+	.setCreativeTab(tabItem).setRegistryName("copper_ingot")
 	.setUnlocalizedName("copper_ingot");
 	
-	public static Item CopperPickaxe = new StandardPickaxe(Copper)
-	.setCreativeTab(CreativeTabs.TOOLS).setRegistryName("copper_pickaxe")
+	//Copper Pickaxe
+	public static final Item CopperPickaxe = new StandardPickaxe(Copper)
+	.setCreativeTab(tabItem).setRegistryName("copper_pickaxe")
 	.setUnlocalizedName("copper_pickaxe");
 	
-	public static Item CopperAxe = new StandardAxe(Copper)
-	.setCreativeTab(CreativeTabs.TOOLS).setRegistryName("copper_axe")
+	//Copper Axe
+	public static final Item CopperAxe = new StandardAxe(Copper)
+	.setCreativeTab(tabItem).setRegistryName("copper_axe")
 	.setUnlocalizedName("copper_axe");
 	
-	public static Item CopperHoe = new StandardHoe(Copper)
-	.setCreativeTab(CreativeTabs.TOOLS).setRegistryName("copper_hoe")
+	//Copper Hoe
+	public static final Item CopperHoe = new StandardHoe(Copper)
+	.setCreativeTab(tabItem).setRegistryName("copper_hoe")
 	.setUnlocalizedName("copper_hoe");
 	
-	public static Item CopperShovel = new StandardShovel(Copper)
-	.setCreativeTab(CreativeTabs.TOOLS).setRegistryName("copper_shovel")
+	//Copper Shovel
+	public static final Item CopperShovel = new StandardShovel(Copper)
+	.setCreativeTab(tabItem).setRegistryName("copper_shovel")
 	.setUnlocalizedName("copper_shovel");
 	
-	public static Item CopperSword = new StandardSword(Copper)
-	.setCreativeTab(CreativeTabs.TOOLS).setRegistryName("copper_sword")
+	//Copper Sword
+	public static final Item CopperSword = new StandardSword(Copper)
+	.setCreativeTab(tabItem).setRegistryName("copper_sword")
 	.setUnlocalizedName("copper_sword");
 	
 	public static void registerItems(){
