@@ -12,17 +12,17 @@ public class MLogger extends Logger{
 	}
 
 	public void error(String msg){
-		System.out.println("{{{{ERROR}}}} " + msg);
+		System.out.println("{ERROR} " + msg);
 	}
 	
 	@Override
 	public void severe(String msg){
-		System.out.println("{{{SEVERE}}} " + msg);
+		System.out.println("{SEVERE} " + msg);
 	}
 	
 	@Override
 	public void warning(String msg){
-		System.out.println("{{WARNING}} " + msg);
+		System.out.println("{WARNING} " + msg);
 	}
 	
 	public void info(String msg){

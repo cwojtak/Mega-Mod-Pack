@@ -11,6 +11,7 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void preInit(FMLPreInitializationEvent e) {
         super.preInit(e);
+        MItemRenderRegister.preInit();
     }
 
     @Override
@@ -18,7 +19,13 @@ public class ClientProxy extends CommonProxy {
         super.init(e);
     	MBlockRenderRegister.registerBlockRenderer();
     	MItemRenderRegister.registerItemRenderer(); 
-    	MegaModPack.MMP_GLOBAL_LOGGER.info("Renderers loaded sucessfully!");
+    	
+    	if (MItemRenderRegister.noErrors == true && MBlockRenderRegister.noErrors == true){
+    		MegaModPack.MMP_GLOBAL_LOGGER.info("Renderers loaded sucessfully!");
+    	}
+    	else {
+    		MegaModPack.MMP_GLOBAL_LOGGER.severe("Renderers failed to load sucessfully!");
+    	}
     }
 
     @Override

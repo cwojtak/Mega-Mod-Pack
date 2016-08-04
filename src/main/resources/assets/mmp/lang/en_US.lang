@@ -10,9 +10,14 @@ item.copper_chestplate.name=Copper Chestplate
 item.copper_leggings.name=Copper Leggings
 item.copper_boots.name=Copper Boots
 
+item.cotton_candy.red.name=Red Cotton Candy
+item.cotton_candy.blue.name=Blue Cotton Candy
+
 tile.copper_block.name=Copper Block
 tile.copper_ore.name=Copper Ore
 
 itemGroup.mmpItems=MMP's Items
 itemGroup.mmpBlocks=MMP's Blocks
 itemGroup.mmpArmor=MMP's Armor
+
+biome.muddy_mob_plains.name=Muddy Mob Plains

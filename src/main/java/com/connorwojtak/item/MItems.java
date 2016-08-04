@@ -1,9 +1,12 @@
 package com.connorwojtak.item;
 
+import java.util.ArrayList;
+
 import com.connorwojtak.creativetab.MTabArmor;
 import com.connorwojtak.creativetab.MTabBlock;
 import com.connorwojtak.creativetab.MTabItem;
 
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -11,12 +14,16 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemFood;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MItems{
 	public static CreativeTabs tabItem = new MTabItem("mmpItems");
 	public static CreativeTabs tabArmor = new MTabArmor("mmpArmor");
+	static ArrayList<Item> itemList = new ArrayList<Item>();
 	
 	//Copper Material
 	public static final ToolMaterial Copper = EnumHelper.addToolMaterial("Copper", 5, 181, 1.5F, 3.0F, 15);
@@ -52,12 +59,28 @@ public class MItems{
 	.setCreativeTab(tabItem).setRegistryName("copper_sword")
 	.setUnlocalizedName("copper_sword");
 	
-	public static ItemArmor CopperHelmet;
-	public static ItemArmor CopperChestplate;
-	public static ItemArmor CopperLeggings;
-	public static ItemArmor CopperBoots;
+	public static final ItemFood CottonCandy = new CottonCandy(10, 0.2F, true, "cotton_candy");
+	
+	public static final ItemArmor CopperHelmet = new PotionArmor(CopperArmor, 1, EntityEquipmentSlot.HEAD, "copper_helmet");
+	public static final ItemArmor CopperChestplate = new PotionArmor(CopperArmor, 1, EntityEquipmentSlot.CHEST, "copper_chestplate");
+	public static final ItemArmor CopperLeggings = new PotionArmor(CopperArmor, 2, EntityEquipmentSlot.LEGS, "copper_leggings");
+	public static final ItemArmor CopperBoots  = new PotionArmor(CopperArmor, 1, EntityEquipmentSlot.FEET, "copper_boots");
 	
 	public static void registerItems(){
+		itemList.add(CopperIngot);
+		itemList.add(CopperPickaxe);
+		itemList.add(CopperAxe);
+		itemList.add(CopperHoe);
+		itemList.add(CopperShovel);
+		itemList.add(CopperSword);
+		
+		itemList.add(CopperHelmet);
+		itemList.add(CopperChestplate);
+		itemList.add(CopperLeggings);
+		itemList.add(CopperBoots);
+		
+		//itemList.add(CottonCandy); //Cotton Candy is removed due to metadata.
+		
 		GameRegistry.register(CopperIngot);
 		GameRegistry.register(CopperPickaxe);
 		GameRegistry.register(CopperAxe);
@@ -65,10 +88,12 @@ public class MItems{
 		GameRegistry.register(CopperShovel);
 		GameRegistry.register(CopperSword);
 		
-		GameRegistry.register(CopperHelmet = new PotionArmor(CopperArmor, 1, EntityEquipmentSlot.HEAD, "copper_helmet"));
-		GameRegistry.register(CopperChestplate = new PotionArmor(CopperArmor, 1, EntityEquipmentSlot.CHEST, "copper_chestplate"));
-		GameRegistry.register(CopperLeggings = new PotionArmor(CopperArmor, 2, EntityEquipmentSlot.LEGS, "copper_leggings"));
-		GameRegistry.register(CopperBoots = new PotionArmor(CopperArmor, 1, EntityEquipmentSlot.FEET, "copper_boots"));       
+		GameRegistry.register(CopperHelmet);
+		GameRegistry.register(CopperChestplate);
+		GameRegistry.register(CopperLeggings);
+		GameRegistry.register(CopperBoots);  
+		
+		GameRegistry.register(CottonCandy);     
 	}
 	
 }
