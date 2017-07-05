@@ -1,0 +1,101 @@
+---- Minecraft Crash Report ----
+// Don't be sad. I'll do better next time, I promise!
+
+Time: 6/22/17 8:54 AM
+Description: Exception preparing structure feature
+
+java.lang.NullPointerException: Exception preparing structure feature
+	at com.connorwojtak.world.ComponentHumanStrongholdStructure$Stronghold.addComponentParts(ComponentHumanStrongholdStructure.java:2147)
+	at com.connorwojtak.world.HumanStrongholdStructureGenerator$Start.<init>(HumanStrongholdStructureGenerator.java:153)
+	at com.connorwojtak.world.HumanStrongholdStructureGenerator$Start.<init>(HumanStrongholdStructureGenerator.java:146)
+	at com.connorwojtak.world.HumanStrongholdStructureGenerator.getStructureStart(HumanStrongholdStructureGenerator.java:127)
+	at net.minecraft.world.gen.structure.MapGenStructure.recursiveGenerate(MapGenStructure.java:48)
+	at net.minecraft.world.gen.MapGenBase.generate(MapGenBase.java:31)
+	at com.connorwojtak.init.MWorldGen.runGenerator(MWorldGen.java:96)
+	at com.connorwojtak.init.MWorldGen.generate(MWorldGen.java:44)
+	at net.minecraftforge.fml.common.registry.GameRegistry.generateWorld(GameRegistry.java:122)
+	at net.minecraft.world.chunk.Chunk.populateChunk(Chunk.java:1079)
+	at net.minecraft.world.chunk.Chunk.populateChunk(Chunk.java:1042)
+	at net.minecraft.world.gen.ChunkProviderServer.provideChunk(ChunkProviderServer.java:165)
+	at net.minecraft.server.management.PlayerChunkMapEntry.providePlayerChunk(PlayerChunkMapEntry.java:130)
+	at net.minecraft.server.management.PlayerChunkMap.tick(PlayerChunkMap.java:183)
+	at net.minecraft.world.WorldServer.tick(WorldServer.java:230)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:784)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:699)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:548)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at com.connorwojtak.world.ComponentHumanStrongholdStructure$Stronghold.addComponentParts(ComponentHumanStrongholdStructure.java:2147)
+	at com.connorwojtak.world.HumanStrongholdStructureGenerator$Start.<init>(HumanStrongholdStructureGenerator.java:153)
+	at com.connorwojtak.world.HumanStrongholdStructureGenerator$Start.<init>(HumanStrongholdStructureGenerator.java:146)
+	at com.connorwojtak.world.HumanStrongholdStructureGenerator.getStructureStart(HumanStrongholdStructureGenerator.java:127)
+
+-- Feature being prepared --
+Details:
+	Is feature chunk: True
+	Chunk location: -224,-264
+	Chunk pos hash: -1129576399072
+	Structure type: com.connorwojtak.world.HumanStrongholdStructureGenerator
+Stacktrace:
+	at net.minecraft.world.gen.structure.MapGenStructure.recursiveGenerate(MapGenStructure.java:48)
+	at net.minecraft.world.gen.MapGenBase.generate(MapGenBase.java:31)
+	at com.connorwojtak.init.MWorldGen.runGenerator(MWorldGen.java:96)
+	at com.connorwojtak.init.MWorldGen.generate(MWorldGen.java:44)
+	at net.minecraftforge.fml.common.registry.GameRegistry.generateWorld(GameRegistry.java:122)
+	at net.minecraft.world.chunk.Chunk.populateChunk(Chunk.java:1079)
+	at net.minecraft.world.chunk.Chunk.populateChunk(Chunk.java:1042)
+	at net.minecraft.world.gen.ChunkProviderServer.provideChunk(ChunkProviderServer.java:165)
+	at net.minecraft.server.management.PlayerChunkMapEntry.providePlayerChunk(PlayerChunkMapEntry.java:130)
+	at net.minecraft.server.management.PlayerChunkMap.tick(PlayerChunkMap.java:183)
+	at net.minecraft.world.WorldServer.tick(WorldServer.java:230)
+
+-- Affected level --
+Details:
+	Level name: 2New World2a
+	All players: 1 total; [EntityPlayerMP['Player863'/347, l='2New World2a', x=-18.79, y=93.30, z=-52.63]]
+	Chunk stats: ServerChunkCache: 1002 Drop: 0
+	Level seed: 4778130830998451666
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (51,64,-47), Chunk: (at 3,4,1 in 3,-3; contains blocks 48,0,-48 to 63,255,-33), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Level time: 119 game time, 119 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 40528 (now: false), thunder time: 112597 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:784)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:699)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:548)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.11
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_111, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 589075784 bytes (561 MB) / 1029701632 bytes (982 MB) up to 1901592576 bytes (1813 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	FML: MCP 9.35 Powered by Forge 13.19.1.2189 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.11-13.19.1.2189.jar) 
+	UCHIJAAAA	forge{13.19.1.2189} [Minecraft Forge] (forgeSrc-1.11-13.19.1.2189.jar) 
+	UCHIJAAAA	og{1.2.4} [Ore Galore] (bin) 
+	Loaded coremods (and transformers): 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 8; [EntityPlayerMP['Player863'/347, l='2New World2a', x=-18.79, y=93.30, z=-52.63]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

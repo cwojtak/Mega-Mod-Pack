@@ -21,10 +21,10 @@ public class ClientProxy extends CommonProxy {
     	MItemRenderRegister.registerItemRenderer(); 
     	
     	if (MItemRenderRegister.noErrors == true && MBlockRenderRegister.noErrors == true){
-    		MegaModPack.MMP_GLOBAL_LOGGER.info("Renderers loaded sucessfully!");
+    		OreGalore.OG_LOGGER.info("Renderers loaded sucessfully!");
     	}
     	else {
-    		MegaModPack.MMP_GLOBAL_LOGGER.severe("Renderers failed to load sucessfully!");
+    		OreGalore.OG_LOGGER.severe("Renderers failed to load sucessfully!");
     	}
     }
 

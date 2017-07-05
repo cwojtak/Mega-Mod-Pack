@@ -1,9 +1,10 @@
 package com.connorwojtak.creativetab;
 
-import com.connorwojtak.item.MItems;
+import com.connorwojtak.init.MItems;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class MTabArmor extends CreativeTabs{
 
@@ -12,8 +13,8 @@ public class MTabArmor extends CreativeTabs{
 	}
 
 	@Override
-	public Item getTabIconItem() {
-		return MItems.CopperHelmet;
+	public ItemStack getTabIconItem() {
+		return new ItemStack(MItems.CopperHelmet);
 	}
 
 }

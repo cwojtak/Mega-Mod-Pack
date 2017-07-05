@@ -1,0 +1,97 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 6/19/17 8:59 AM
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at net.minecraft.block.Block.dropBlockAsItemWithChance(Block.java:694)
+	at net.minecraft.world.Explosion.doExplosionB(Explosion.java:241)
+	at net.minecraft.world.WorldServer.newExplosion(WorldServer.java:1250)
+	at net.minecraft.world.World.createExplosion(World.java:2457)
+	at com.connorwojtak.block.EntityExplosionPrimed.explode(EntityExplosionPrimed.java:114)
+	at com.connorwojtak.block.EntityExplosionPrimed.onUpdate(EntityExplosionPrimed.java:101)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2141)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:876)
+	at net.minecraft.world.World.updateEntity(World.java:2108)
+	at net.minecraft.world.World.updateEntities(World.java:1921)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:648)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:795)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:699)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:548)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.block.Block.dropBlockAsItemWithChance(Block.java:694)
+	at net.minecraft.world.Explosion.doExplosionB(Explosion.java:241)
+	at net.minecraft.world.WorldServer.newExplosion(WorldServer.java:1250)
+	at net.minecraft.world.World.createExplosion(World.java:2457)
+	at com.connorwojtak.block.EntityExplosionPrimed.explode(EntityExplosionPrimed.java:114)
+	at com.connorwojtak.block.EntityExplosionPrimed.onUpdate(EntityExplosionPrimed.java:101)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2141)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:876)
+	at net.minecraft.world.World.updateEntity(World.java:2108)
+
+-- Entity being ticked --
+Details:
+	Entity Type: null (com.connorwojtak.block.EntityExplosionPrimed)
+	Entity ID: 445
+	Entity Name: unknown
+	Entity's Exact location: 180.51, 64.16, 250.50
+	Entity's Block location: World: (180,64,250), Chunk: (at 4,4,10 in 11,15; contains blocks 176,0,240 to 191,255,255), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Entity's Momentum: 0.00, 0.16, -0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:1921)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:648)
+
+-- Affected level --
+Details:
+	Level name: Tester
+	All players: 1 total; [EntityPlayerMP['Player141'/307, l='Tester', x=179.57, y=64.00, z=253.16]]
+	Chunk stats: ServerChunkCache: 627 Drop: 0
+	Level seed: -4413700269302870761
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (248,64,252), Chunk: (at 8,4,12 in 15,15; contains blocks 240,0,240 to 255,255,255), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 9363 game time, 9363 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 116125 (now: false), thunder time: 44972 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:795)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:699)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:548)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.11
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_131, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 459582448 bytes (438 MB) / 1039138816 bytes (991 MB) up to 1901592576 bytes (1813 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	FML: MCP 9.35 Powered by Forge 13.19.1.2189 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.11-13.19.1.2189.jar) 
+	UCHIJAAAA	forge{13.19.1.2189} [Minecraft Forge] (forgeSrc-1.11-13.19.1.2189.jar) 
+	UCHIJAAAA	og{1.2.4} [Ore Galore] (bin) 
+	Loaded coremods (and transformers): 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 8; [EntityPlayerMP['Player141'/307, l='Tester', x=179.57, y=64.00, z=253.16]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

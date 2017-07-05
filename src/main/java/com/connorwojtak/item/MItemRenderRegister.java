@@ -1,6 +1,7 @@
 package com.connorwojtak.item;
 
-import com.connorwojtak.common.MegaModPack;
+import com.connorwojtak.common.OreGalore;
+import com.connorwojtak.init.MItems;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemMeshDefinition;
@@ -24,16 +25,16 @@ import net.minecraftforge.client.model.ModelLoaderRegistry.LoaderException;
 
 public class MItemRenderRegister {
 
-	public static final String MODID = MegaModPack.MODID; 
+	public static final String MODID = OreGalore.MODID; 
 	public static boolean noErrors = true;
 	
 	public static void registerItemRenderer(){
-		for(int i = 0; i < MItems.itemList.size(); i++){
+		for(int i = 0; i < MItems.getItemList().size(); i++){
 			try {
-				reg(MItems.itemList.get(i));
+				reg(MItems.getItemList().get(i));
 			}
 			catch(NullPointerException e){
-				MegaModPack.MMP_GLOBAL_LOGGER.error("FAILED TO REGISTER MODEL. TRACEBACK: \n");
+				OreGalore.OG_LOGGER.error("FAILED TO REGISTER MODEL. TRACEBACK: \n");
 				e.printStackTrace();
 				noErrors = false;
 			}
@@ -43,13 +44,33 @@ public class MItemRenderRegister {
 	public static void preInit(){
 		final ModelResourceLocation CottonCandyBlue = new ModelResourceLocation(MODID + ":cotton_candy_blue", "inventory");
 		final ModelResourceLocation CottonCandyRed = new ModelResourceLocation(MODID + ":cotton_candy_red", "inventory");
+		final ModelResourceLocation CottonCandyGreen = new ModelResourceLocation(MODID + ":cotton_candy_green", "inventory");
+		final ModelResourceLocation CottonCandyYellow = new ModelResourceLocation(MODID + ":cotton_candy_yellow", "inventory");
+		final ModelResourceLocation CottonCandyWhite = new ModelResourceLocation(MODID + ":cotton_candy_white", "inventory");
+		final ModelResourceLocation CottonCandyBlack = new ModelResourceLocation(MODID + ":cotton_candy_black", "inventory");
+		final ModelResourceLocation CottonCandyPurple = new ModelResourceLocation(MODID + ":cotton_candy_purple", "inventory");
+		final ModelResourceLocation CottonCandyOrange = new ModelResourceLocation(MODID + ":cotton_candy_orange", "inventory");
+		final ModelResourceLocation CottonCandyBrown = new ModelResourceLocation(MODID + ":cotton_candy_brown", "inventory");
+		final ModelResourceLocation CottonCandyPink = new ModelResourceLocation(MODID + ":cotton_candy_pink", "inventory");
 		
-		ModelBakery.registerItemVariants(MItems.CottonCandy, CottonCandyBlue, CottonCandyRed);
+		ModelBakery.registerItemVariants(MItems.CottonCandy, CottonCandyBlue, CottonCandyRed, CottonCandyGreen, CottonCandyYellow,
+		CottonCandyWhite, CottonCandyBlack, CottonCandyPurple, CottonCandyOrange, CottonCandyBrown, CottonCandyPink);
         ModelLoader.setCustomMeshDefinition(MItems.CottonCandy, new ItemMeshDefinition() {
         	@Override
             public ModelResourceLocation getModelLocation(ItemStack stack) {
             	final int meta = stack.getItem().getMetadata(stack);
-            	if (meta == 1){ return CottonCandyBlue; } if (meta == 0){ return CottonCandyRed; } return null; }});
+            	if (meta == 9){ return CottonCandyPink; } 
+            	if (meta == 8){ return CottonCandyBrown; } 
+            	if (meta == 7){ return CottonCandyOrange; } 
+            	if (meta == 6){ return CottonCandyPurple; } 
+            	if (meta == 5){ return CottonCandyBlack; } 
+            	if (meta == 4){ return CottonCandyWhite; } 
+            	if (meta == 3){ return CottonCandyYellow; } 
+            	if (meta == 2){ return CottonCandyGreen; } 
+            	if (meta == 1){ return CottonCandyBlue; } 
+            	if (meta == 0){ return CottonCandyRed; } 
+            	return null; 
+            	}});
 
 }
     

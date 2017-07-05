@@ -1,0 +1,59 @@
+[17:27:27] [Client thread/INFO]: Setting user: Player183
+[17:27:32] [Client thread/WARN]: Skipping bad option: lastServer:
+[17:27:32] [Client thread/INFO]: LWJGL Version: 2.9.4
+[17:27:34] [Client thread/INFO]: [STDOUT]: ---- Minecraft Crash Report ----
+// I feel sad now :(
+
+Time: 6/25/17 5:27 PM
+Description: Loading screen debug info
+
+This is just a prompt for computer specs to be printed. THIS IS NOT A ERROR
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.11
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_111, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 418882400 bytes (399 MB) / 615514112 bytes (587 MB) up to 1901592576 bytes (1813 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 382.05' Renderer: 'GeForce GTX 970/PCIe/SSE2'
+[17:27:38] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Ore Galore
+[17:27:38] [Client thread/INFO]: [STDOUT]: OG:{INFO} OG Logger sucessfully loaded!
+[17:27:38] [Client thread/INFO]: [STDOUT]: OG:{INFO} Items loaded sucessfully!
+[17:27:38] [Client thread/INFO]: [STDOUT]: OG:{INFO} Blocks loaded sucessfully!
+[17:27:38] [Client thread/INFO]: [STDOUT]: OG:{INFO} Entities loaded sucessfully!
+[17:27:38] [Client thread/INFO]: [STDOUT]: OG:{INFO} Biomes loaded successfully!
+[17:27:42] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[17:27:42] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[17:27:42] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[17:27:42] [Thread-8/INFO]: OpenAL initialized.
+[17:27:43] [Sound Library Loader/INFO]: Sound engine started
+[17:27:48] [Client thread/INFO]: Created: 16x16 textures-atlas
+[17:27:49] [Client thread/INFO]: [STDOUT]: OG:{INFO} Tile Entities loaded sucessfully!
+[17:27:49] [Client thread/INFO]: [STDOUT]: OG:{INFO} Crafting loaded sucessfully!
+[17:27:49] [Client thread/INFO]: [STDOUT]: OG:{INFO} World Generator loaded sucessfully!
+[17:27:49] [Client thread/INFO]: [STDOUT]: OG:{INFO} Renderers loaded sucessfully!
+[17:27:49] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Ore Galore
+[17:27:53] [Client thread/INFO]: SoundSystem shutting down...
+[17:27:53] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[17:27:53] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[17:27:53] [Thread-10/INFO]: Initializing LWJGL OpenAL
+[17:27:53] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[17:27:53] [Thread-10/INFO]: OpenAL initialized.
+[17:27:53] [Sound Library Loader/INFO]: Sound engine started
+[17:27:58] [Client thread/INFO]: Created: 512x512 textures-atlas
+[17:27:59] [Client thread/WARN]: Skipping bad option: lastServer:
+[17:28:00] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[17:28:06] [Client thread/INFO]: Deleting level New World
+[17:28:06] [Client thread/INFO]: Attempt 1...
+[17:37:37] [Client thread/INFO]: Stopping!
+[17:37:37] [Client thread/INFO]: SoundSystem shutting down...
+[17:37:37] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

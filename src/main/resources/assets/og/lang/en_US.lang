@@ -1,0 +1,48 @@
+item.copper_ingot.name=Copper Ingot
+item.copper_pickaxe.name=Copper Pickaxe
+item.copper_axe.name=Copper Axe 
+item.copper_shovel.name=Copper Shovel
+item.copper_hoe.name=Copper Hoe
+item.copper_sword.name=Copper Sword
+
+item.copper_helmet.name=Copper Helmet
+item.copper_chestplate.name=Copper Chestplate
+item.copper_leggings.name=Copper Leggings
+item.copper_boots.name=Copper Boots
+
+item.titanium_ingot.name=Titanium Ingot
+item.titanium_pickaxe.name=Titanium Pickaxe
+item.titanium_axe.name=Titanium Axe 
+item.titanium_shovel.name=Titanium Shovel
+item.titanium_hoe.name=Titanium Hoe
+item.titanium_sword.name=Titanium Sword
+
+item.titanium_helmet.name=Titanium Helmet
+item.titanium_chestplate.name=Titanium Chestplate
+item.titanium_leggings.name=Titanium Leggings
+item.titanium_boots.name=Titanium Boots
+
+item.cotton_candy.red.name=Red Cotton Candy
+item.cotton_candy.blue.name=Blue Cotton Candy
+item.cotton_candy.green.name=Green Cotton Candy
+item.cotton_candy.yellow.name=Yellow Cotton Candy
+item.cotton_candy.white.name=White Cotton Candy
+item.cotton_candy.black.name=Black Cotton Candy
+item.cotton_candy.purple.name=Purple Cotton Candy
+item.cotton_candy.orange.name=Orange Cotton Candy
+item.cotton_candy.brown.name=Brown Cotton Candy
+item.cotton_candy.pink.name=Pink Cotton Candy
+
+tile.copper_block.name=Copper Block
+tile.copper_ore.name=Copper Ore
+tile.titanium_block.name=Titanium Block
+tile.titanium_ore.name=Titanium Ore
+tile.explosion_stone.name=Explosion Stone
+
+itemGroup.ogItems=OG's Items
+itemGroup.ogBlocks=OG's Blocks
+itemGroup.ogArmor=OG's Armor
+
+entity.fire_creeper.name=Fire Creeper
+
+biome.fire_lands.name=Fire Lands

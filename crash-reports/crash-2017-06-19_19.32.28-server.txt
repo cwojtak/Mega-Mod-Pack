@@ -1,0 +1,75 @@
+---- Minecraft Crash Report ----
+// You should try our sister game, Minceraft!
+
+Time: 6/19/17 7:32 PM
+Description: Exception preparing structure feature
+
+java.lang.RuntimeException: StructureStart "com.connorwojtak.world.HumanStrongholdStructureGenerator$Start" missing ID Mapping, Modder see MapGenStructureIO
+	at net.minecraft.world.gen.structure.StructureStart.writeStructureComponentsToNBT(StructureStart.java:75)
+	at net.minecraft.world.gen.structure.MapGenStructure.setStructureStart(MapGenStructure.java:217)
+	at net.minecraft.world.gen.structure.MapGenStructure.recursiveGenerate(MapGenStructure.java:53)
+	at net.minecraft.world.gen.MapGenBase.generate(MapGenBase.java:31)
+	at com.connorwojtak.init.MWorldGen.runGenerator(MWorldGen.java:92)
+	at com.connorwojtak.init.MWorldGen.generate(MWorldGen.java:42)
+	at net.minecraftforge.fml.common.registry.GameRegistry.generateWorld(GameRegistry.java:122)
+	at net.minecraft.world.chunk.Chunk.populateChunk(Chunk.java:1079)
+	at net.minecraft.world.chunk.Chunk.populateChunk(Chunk.java:1061)
+	at net.minecraft.world.gen.ChunkProviderServer.provideChunk(ChunkProviderServer.java:165)
+	at net.minecraft.server.MinecraftServer.initialWorldChunkLoad(MinecraftServer.java:341)
+	at net.minecraft.server.integrated.IntegratedServer.loadAllWorlds(IntegratedServer.java:107)
+	at net.minecraft.server.integrated.IntegratedServer.startServer(IntegratedServer.java:124)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:508)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.world.gen.structure.StructureStart.writeStructureComponentsToNBT(StructureStart.java:75)
+	at net.minecraft.world.gen.structure.MapGenStructure.setStructureStart(MapGenStructure.java:217)
+
+-- Feature being prepared --
+Details:
+	Is feature chunk: True
+	Chunk location: 54,56
+	Chunk pos hash: 240518168630
+	Structure type: com.connorwojtak.world.HumanStrongholdStructureGenerator
+Stacktrace:
+	at net.minecraft.world.gen.structure.MapGenStructure.recursiveGenerate(MapGenStructure.java:53)
+	at net.minecraft.world.gen.MapGenBase.generate(MapGenBase.java:31)
+	at com.connorwojtak.init.MWorldGen.runGenerator(MWorldGen.java:92)
+	at com.connorwojtak.init.MWorldGen.generate(MWorldGen.java:42)
+	at net.minecraftforge.fml.common.registry.GameRegistry.generateWorld(GameRegistry.java:122)
+	at net.minecraft.world.chunk.Chunk.populateChunk(Chunk.java:1079)
+	at net.minecraft.world.chunk.Chunk.populateChunk(Chunk.java:1061)
+	at net.minecraft.world.gen.ChunkProviderServer.provideChunk(ChunkProviderServer.java:165)
+	at net.minecraft.server.MinecraftServer.initialWorldChunkLoad(MinecraftServer.java:341)
+	at net.minecraft.server.integrated.IntegratedServer.loadAllWorlds(IntegratedServer.java:107)
+	at net.minecraft.server.integrated.IntegratedServer.startServer(IntegratedServer.java:124)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:508)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.11
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_131, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 324025720 bytes (309 MB) / 950009856 bytes (906 MB) up to 1901592576 bytes (1813 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 1, tcache: 1, allocated: 12, tallocated: 94
+	FML: MCP 9.35 Powered by Forge 13.19.1.2189 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.11-13.19.1.2189.jar) 
+	UCHIJAA	forge{13.19.1.2189} [Minecraft Forge] (forgeSrc-1.11-13.19.1.2189.jar) 
+	UCHIJAA	og{1.2.4} [Ore Galore] (bin) 
+	Loaded coremods (and transformers): 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

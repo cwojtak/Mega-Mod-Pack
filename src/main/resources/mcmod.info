@@ -1,14 +1,14 @@
 [
 {
-  "modid": "mmp",
-  "name": "Mega Mod Pack",
+  "modid": "og",
+  "name": "Ore Galore",
   "description": "A pack of many new blocks and items.",
-  "version": "1.2.4",
-  "mcversion": "1.10.2",
+  "version": "1.5.6",
+  "mcversion": "1.11.2",
   "url": "connorwojtak.com",
   "updateUrl": "",
   "authorList": ["cwojtak"],
-  "credits": "The people who made Minecraft Forge.",
+  "credits": "The creators of Minecraft Forge.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

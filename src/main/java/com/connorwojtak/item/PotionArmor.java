@@ -1,5 +1,7 @@
 package com.connorwojtak.item;
 
+import com.connorwojtak.init.MItems;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
@@ -38,5 +40,4 @@ public class PotionArmor extends ItemArmor{
 	    if (player.getActivePotionEffect(potion) == null || player.getActivePotionEffect(potion).getDuration() <= 1)
 	        player.addPotionEffect(new PotionEffect(Potion.getPotionById(id), 159, amplifier, true, true));
 	}
-	
 }

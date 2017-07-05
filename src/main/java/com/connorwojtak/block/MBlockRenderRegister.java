@@ -7,21 +7,22 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
-import com.connorwojtak.common.MegaModPack;
-import com.connorwojtak.item.MItems;
+import com.connorwojtak.common.OreGalore;
+import com.connorwojtak.init.MBlocks;
+import com.connorwojtak.init.MItems;
 
 public final class MBlockRenderRegister {
 	
-	public static final String MODID = MegaModPack.MODID;
+	public static final String MODID = OreGalore.MODID;
 	public static boolean noErrors = true;
 	
 	public static void registerBlockRenderer(){
-		for(int i = 0; i < MBlocks.blockList.size(); i++){
+		for(int i = 0; i < MBlocks.getBlockList().size(); i++){
 			try {
-				reg(MBlocks.blockList.get(i));
+				reg(MBlocks.getBlockList().get(i));
 			}
 			catch(NullPointerException e){
-				MegaModPack.MMP_GLOBAL_LOGGER.error("FAILED TO REGISTER MODEL. TRACEBACK: \n" + e.getStackTrace());
+				OreGalore.OG_LOGGER.error("FAILED TO REGISTER MODEL. TRACEBACK: \n" + e.getStackTrace());
 				System.out.println(i);
 				noErrors = false;
 			}

@@ -1,0 +1,128 @@
+{
+    "pools": [
+        {
+			"name": "main",
+            "rolls": {
+                "min": 5,
+                "max": 9
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:diamond",
+                    "weight": 10
+                },
+                {
+                    "type": "item",
+                    "name": "og:titanium_ingot",
+                    "weight": 5
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:gold_ingot",
+                    "weight": 15
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:emerald",
+                    "weight": 2
+                },
+                {
+                    "type": "item",
+                    "name": "og:copper_ingot",
+                    "weight": 5
+                },
+                {
+                    "type": "item",
+                    "name": "og:copper_chestplate",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:iron_horse_armor",
+                    "weight": 1
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:golden_horse_armor",
+                    "weight": 1
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:diamond_horse_armor",
+                    "weight": 1
+                },
+                {
+                    "type": "item",
+                    "name": "og:titanium_sword",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "og:copper_sword",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "og:titanium_leggings",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:diamond_leggings",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:diamond_helmet",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "og:titanium_helmet",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "og:titanium_pickaxe",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:diamond_sword",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:diamond_boots",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:diamond_chestplate",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:iron_leggings",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:iron_helmet",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:iron_pickaxe",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:iron_shovel",
+                    "weight": 3
+                }
+            ]
+        }
+    ]
+}
